@@ -1,0 +1,134 @@
+{
+  "generated": "2026-09-10T02:27:29Z",
+  "license": "See LICENSE.md. One-time purchase; run for personal or commercial use; do not redistribute the standalones.",
+  "items": [
+    {
+      "id": "ars",
+      "title": "Ars Subtilior \u2014 The Subtle Art",
+      "theme": "medieval music",
+      "blurb": "A scrolling isorhythmic score plus the generative composer (termfx.py music) that writes its own motets to WAV.",
+      "price": 6.99,
+      "file": "packed/ars.py",
+      "free": false,
+      "tags": [
+        "music",
+        "medieval",
+        "generative"
+      ],
+      "bytes": 5852
+    },
+    {
+      "id": "sophia",
+      "title": "Sophia \u2014 Aeons of Light",
+      "theme": "gnostic luminaries",
+      "blurb": "A rotating aeon mandala of the pleroma, meditative sparks and pulsing rings of light.",
+      "price": 2.99,
+      "file": "packed/sophia.py",
+      "free": false,
+      "tags": [
+        "meditative",
+        "mandala"
+      ],
+      "bytes": 5028
+    },
+    {
+      "id": "maria",
+      "title": "Maria \u2014 Rosary of Light",
+      "theme": "the Mother",
+      "blurb": "Breathing halos around a luminous core under a field of stars \u2014 blue mantle, golden light.",
+      "price": 3.99,
+      "file": "packed/maria.py",
+      "free": false,
+      "tags": [
+        "meditative",
+        "halo"
+      ],
+      "bytes": 4890
+    },
+    {
+      "id": "david",
+      "title": "David \u2014 The Psalmist's Harp",
+      "theme": "the psalms",
+      "blurb": "A harp strums in a travelling wave of light over amber psalm verses in gold and lapis.",
+      "price": 3.99,
+      "file": "packed/david.py",
+      "free": false,
+      "tags": [
+        "music",
+        "psalms"
+      ],
+      "bytes": 5313
+    },
+    {
+      "id": "light",
+      "title": "Light \u2014 Light upon Light",
+      "theme": "geometric light; aniconic",
+      "blurb": "An eightfold star lattice turning in luminous gold over teal shadow. Non-figurative, honoring the aniconic tradition.",
+      "price": 2.99,
+      "file": "packed/light.py",
+      "free": false,
+      "tags": [
+        "geometry",
+        "aniconic"
+      ],
+      "bytes": 4964
+    },
+    {
+      "id": "sinai",
+      "title": "Sinai \u2014 The Parting",
+      "theme": "the exodus",
+      "blurb": "Two walls of water roll apart leaving a golden roadway under a desert sun.",
+      "price": 3.99,
+      "file": "packed/sinai.py",
+      "free": false,
+      "tags": [
+        "water",
+        "exodus"
+      ],
+      "bytes": 5069
+    },
+    {
+      "id": "deseret",
+      "title": "Deseret \u2014 Hive at Dawn",
+      "theme": "the beehive",
+      "blurb": "A honeycomb lattice glowing honey-gold over a slow sunrise.",
+      "price": 2.99,
+      "file": "packed/deseret.py",
+      "free": false,
+      "tags": [
+        "pattern",
+        "dawn"
+      ],
+      "bytes": 4866
+    },
+    {
+      "id": "stars",
+      "title": "Starfield \u2014 a free teaser",
+      "theme": "space",
+      "blurb": "The warp-speed starfield, free: a taste of the collection.",
+      "price": 0,
+      "file": "packed/stars.py",
+      "free": true,
+      "tags": [
+        "free",
+        "space"
+      ],
+      "bytes": 5354
+    },
+    {
+      "id": "ars-music-demo",
+      "title": "Ars Subtilior \u2014 demo motet (audio)",
+      "theme": "medieval music",
+      "blurb": "A ~40s isorhythmic motet generated with the ars composer; bundled bonus for the Ars Subtilior product.",
+      "price": 0,
+      "file": "packed/ars-subtilior.wav",
+      "free": true,
+      "upload_as_extra": "ars",
+      "tags": [
+        "music",
+        "audio"
+      ],
+      "bytes": 3018888
+    }
+  ]
+}

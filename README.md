@@ -89,6 +89,18 @@ python3 ~/Pieces/maria.py
 Exports the effect plus a minimal runtime into one self-contained executable
 file (stdlib only) — ready to share or sell as a digital artifact.
 
+## Selling the collection
+
+```bash
+./termfx.py products        # build products/packed/ + manifest.json
+```
+
+Final prices live in `termfx/effects/META` (mirrored to `manifest.json`).
+`README-SELL.md` is the store-setup runbook (Lemon Squeezy, Gumroad, or
+itch.io) and the `LICENSE.md` buyer license is written. The only step that
+needs a human is creating the payment-processor account — everything else is
+ready to upload.
+
 ## Adding an effect
 
 1. Create `termfx/effects/<name>.py` exposing

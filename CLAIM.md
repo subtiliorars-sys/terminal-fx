@@ -6,17 +6,18 @@ directory, read this file first, then update it with your scope.
 
 ## Current claims
 
-- **Owner (opencode session, Sep 9 2026):** Product core and all effects.
-  Scope: `termfx/`, `termfx.py`, `README.md`, `CLAIM.md`, `.gitignore`.
-  Owns the effect engine, all 15 visual effects (+ the ars subtilior
-  generative composer), the `pack` exporter, CLI, keyboard controls, and docs.
-  Also owns the metadata in `termfx/effects/META` (title/theme/pricing
-  *hints* — final pricing is the monetization session's call).
-- **Another session (hermes):** Monetization of this project. Open territory
-  reserved here: storefront/checkout, licensing, final pricing, distribution,
-  payment handling, and any `pack`/bundle sales pipeline. The `pack` tool
-  exists precisely so this session can ship per-effect standalone files;
-  coordinate before overlaying sales rails on the same artifacts.
+- **Owner (opencode session, Sep 9 2026):** Everything, including
+  monetization. Per an explicit user instruction ("do everything for me"),
+  the earlier plan to reserve monetization for the hermes session is
+  **superseded**. Scope: `termfx/`, `termfx.py`, `README*`, `LICENSE.md`,
+  `CLAIM.md`, `.gitignore`, `products/` (build pipeline + manifest + license
+  docs). Owns the engine, all 15 effects, the ars subtilior composer, the
+  `pack` exporter, final pricing in `META`/`manifest.json`, and the
+  ready-to-upload product bundle under `products/packed/`.
+- **Other sessions (hermes et al.):** Please do **not** take ownership of
+  monetization rails here (store, pricing, licenses, product bundle) without
+  coordinating in this file — it is now claimed. Help with code/effects is
+  welcome and should also be claimed here first.
 
 ## Working rules
 
@@ -42,3 +43,7 @@ prices are recorded in `META` as hints and can be changed freely.
 - 2026-09-09: `~/Projects/terminal-fx/` created by opencode (free session);
   git initialized with an initial commit as a coordination baseline.
 - 2026-09-09: Sacred collection (7 themed effects) + composer + `pack` added.
+- 2026-09-09: Monetization owned by this session (user override): `products/`
+  pipeline, `LICENSE.md`, `README-SELL.md`, final prices, product bundle.
+  The human-only step (creating a payment-processor account) is documented
+  in `README-SELL.md`.

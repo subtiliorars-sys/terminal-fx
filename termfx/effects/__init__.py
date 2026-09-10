@@ -32,44 +32,57 @@ META = {
     "ars": {
         "title": "Ars Subtilior — The Subtle Art",
         "theme": "medieval music",
-        "hint": "poetic; ships with the generative composer (termfx.py music)",
-        "suggested": 4.99,
+        "blurb": "A scrolling isorhythmic score plus the generative composer "
+        "(termfx.py music) that writes its own motets to WAV.",
+        "price": 6.99,
+        "tags": ["music", "medieval", "generative"],
     },
     "sophia": {
         "title": "Sophia — Aeons of Light",
         "theme": "gnostic luminaries",
-        "hint": "meditative mandala, sparks and rings",
-        "suggested": 2.99,
+        "blurb": "A rotating aeon mandala of the pleroma, meditative sparks "
+        "and pulsing rings of light.",
+        "price": 2.99,
+        "tags": ["meditative", "mandala"],
     },
     "deseret": {
         "title": "Deseret — Hive at Dawn",
         "theme": "the beehive",
-        "hint": "honeycomb lattice with sunrise",
-        "suggested": 2.99,
+        "blurb": "A honeycomb lattice glowing honey-gold over a slow sunrise.",
+        "price": 2.99,
+        "tags": ["pattern", "dawn"],
     },
     "maria": {
         "title": "Maria — Rosary of Light",
         "theme": "the Mother",
-        "hint": "breathing halos under a field of stars",
-        "suggested": 3.99,
+        "blurb": "Breathing halos around a luminous core under a field of "
+        "stars — blue mantle, golden light.",
+        "price": 3.99,
+        "tags": ["meditative", "halo"],
     },
     "light": {
         "title": "Light — Light upon Light",
         "theme": "geometric light; aniconic",
-        "hint": "eightfold lattice, no figuration",
-        "suggested": 2.99,
+        "blurb": "An eightfold star lattice turning in luminous gold over "
+        "teal shadow. Non-figurative, honoring the aniconic tradition.",
+        "price": 2.99,
+        "tags": ["geometry", "aniconic"],
     },
     "sinai": {
         "title": "Sinai — The Parting",
         "theme": "the exodus",
-        "hint": "opening sea with a golden way",
-        "suggested": 3.99,
+        "blurb": "Two walls of water roll apart leaving a golden roadway "
+        "under a desert sun.",
+        "price": 3.99,
+        "tags": ["water", "exodus"],
     },
     "david": {
         "title": "David — The Psalmist's Harp",
         "theme": "the psalms",
-        "hint": "strumming harp over psalm verse",
-        "suggested": 3.99,
+        "blurb": "A harp strums in a travelling wave of light over amber "
+        "psalm verses in gold and lapis.",
+        "price": 3.99,
+        "tags": ["music", "psalms"],
     },
 }
 

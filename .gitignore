@@ -5,3 +5,6 @@ __pycache__/
 dist/
 build/
 .venv/
+
+# generated sellable artifacts (rebuild with: python3 termfx.py products)
+products/packed/

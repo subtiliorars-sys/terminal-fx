@@ -12,7 +12,7 @@ import argparse
 import os
 import sys
 
-from . import bundle, composer
+from . import bundle, composer, products
 from .effects import REGISTRY
 from .engine import Engine
 
@@ -90,6 +90,9 @@ def main(argv=None):
             play=args.play,
             seed=args.seed,
         )
+
+    if command == "products":
+        return products.main(seed=args.seed)
 
     if command not in REGISTRY and command != "menu":
         print(f"unknown effect '{command}'", file=sys.stderr)
