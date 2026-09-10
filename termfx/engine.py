@@ -7,6 +7,7 @@ import sys
 import time
 
 from . import color
+from .keys import KeyReader
 
 
 def terminal_size():
@@ -29,6 +30,8 @@ class Engine:
         self.resized = False
         self.t = 0.0
         self.width, self.height = self._measure()
+        self._keys = KeyReader()
+        self.nav = {"next": False, "prev": False}
         self._install_winch()
 
     def _measure(self):
@@ -51,12 +54,27 @@ class Engine:
     def cleanup(self):
         sys.stdout.write("\033[2J\033[H\033[?25h\033[0m")
         sys.stdout.flush()
+        self._keys.close()
 
-    def frame_loop(self, render, title=None, duration=None):
+    def _poll_keys(self, manual):
+        while True:
+            ch = self._keys.read()
+            if ch is None:
+                return
+            if ch == "q":
+                self.running = False
+            elif manual and ch == "n":
+                self.nav["next"] = True
+            elif manual and ch == "p":
+                self.nav["prev"] = True
+
+    def frame_loop(self, render, title=None, duration=None, manual=False):
         """Paint frames until ``duration`` seconds elapse (or forever).
 
-        Ctrl+C raises KeyboardInterrupt out of this method; callers should
-        ensure ``cleanup()`` runs exactly once.
+        In manual mode the menu's next/previous keys shorten the run;
+        ``self.nav`` tells the caller which key was pressed. Ctrl+C raises
+        KeyboardInterrupt out of this method; callers should ensure
+        ``cleanup()`` runs exactly once.
         """
         last = time.monotonic()
         next_frame = last
@@ -66,6 +84,10 @@ class Engine:
             now = time.monotonic()
             self.t += now - last
             last = now
+
+            self._poll_keys(manual)
+            if manual and (self.nav["next"] or self.nav["prev"]):
+                return
 
             if self.resized:
                 self.resized = False
@@ -100,7 +122,8 @@ class Engine:
 
     def menu_cycle(self, registry, per_effect, total_duration=None):
         """Run every effect in ``registry``, advancing every ``per_effect``
-        seconds. Return after ``total_duration`` (if given) elapses.
+        seconds. ``n``/``p`` skip ahead or back, ``q`` quits. Return after
+        ``total_duration`` (if given) elapses.
         """
         names = list(registry)
         if not names:
@@ -108,13 +131,26 @@ class Engine:
         index = 0
         start = time.monotonic()
         while self.running:
+            self.nav["next"] = self.nav["prev"] = False
             name = names[index % len(names)]
             render, _ = registry[name]
-            duration = per_effect
+
+            remaining = None
             if total_duration is not None:
                 remaining = total_duration - (time.monotonic() - start)
                 if remaining <= 0:
                     return
-                duration = min(duration, remaining) if duration is not None else remaining
-            self.frame_loop(render, name, duration)
-            index += 1
+            duration = per_effect
+            if remaining is not None:
+                duration = min(duration, remaining)
+
+            self.frame_loop(render, name, duration, manual=True)
+
+            if self.nav["next"]:
+                index += 1
+            elif self.nav["prev"]:
+                index -= 1
+            elif total_duration is not None and time.monotonic() - start >= total_duration:
+                return
+            else:
+                index += 1
