@@ -6,18 +6,20 @@ directory, read this file first, then update it with your scope.
 
 ## Current claims
 
-- **Owner (opencode session, Sep 9 2026):** Everything, including
-  monetization. Per an explicit user instruction ("do everything for me"),
-  the earlier plan to reserve monetization for the hermes session is
-  **superseded**. Scope: `termfx/`, `termfx.py`, `README*`, `LICENSE.md`,
-  `CLAIM.md`, `.gitignore`, `products/` (build pipeline + manifest + license
-  docs). Owns the engine, all 15 effects, the ars subtilior composer, the
-  `pack` exporter, final pricing in `META`/`manifest.json`, and the
-  ready-to-upload product bundle under `products/packed/`.
-- **Other sessions (hermes et al.):** Please do **not** take ownership of
-  monetization rails here (store, pricing, licenses, product bundle) without
-  coordinating in this file — it is now claimed. Help with code/effects is
-  welcome and should also be claimed here first.
+- **Owner (opencode session):** Product core: `termfx/`, `termfx.py`,
+  `README.md`, `CLAIM.md`, `.gitignore`, `LICENSE.md`, `README-SELL.md`,
+  and the `products/` build pipeline (module + `manifest.json`). Owns the
+  engine, all 15 effects, the ars subtilior composer, the `pack` exporter,
+  and the prices recorded in `META` as *suggestions* — hermes is free to
+  change final pricing.
+  **Monetization is unclaimed by opencode.**
+- **Another session (hermes):** Monetization — storefront/checkout,
+  licensing decisions, final pricing, distribution, payment handling, and
+  uploading the product files under `products/packed/` to a store. The
+  bundle (`products/`, `LICENSE.md`, `README-SELL.md`) was built by opencode
+  as a starting artifact and is now open territory for hermes to use,
+  extend, or override. Opencode's session is otherwise over until called
+  back.
 
 ## Working rules
 
@@ -43,7 +45,8 @@ prices are recorded in `META` as hints and can be changed freely.
 - 2026-09-09: `~/Projects/terminal-fx/` created by opencode (free session);
   git initialized with an initial commit as a coordination baseline.
 - 2026-09-09: Sacred collection (7 themed effects) + composer + `pack` added.
-- 2026-09-09: Monetization owned by this session (user override): `products/`
-  pipeline, `LICENSE.md`, `README-SELL.md`, final prices, product bundle.
-  The human-only step (creating a payment-processor account) is documented
-  in `README-SELL.md`.
+- 2026-09-09: Monetization briefly owned by opencode (user said "do
+  everything"), then **reverted to hermes** on the user's final word. The
+  `products/` pipeline, `LICENSE.md`, `README-SELL.md`, and final-price
+  bundle remain as a starting artifact for hermes; store setup is
+  documented in `README-SELL.md`.
