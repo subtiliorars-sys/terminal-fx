@@ -8,3 +8,6 @@ build/
 
 # generated sellable artifacts (rebuild with: python3 termfx.py products)
 products/packed/
+products/stripe_links.json
+landing/assets/*.wav
+landing/assets/*.zip
